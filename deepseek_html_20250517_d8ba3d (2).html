@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Diary - Анализ личности через цвет</title>
+    <meta name="description" content="Узнайте, как цвета влияют на вашу личность и настроение с помощью нашего цветового дневника">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Color Diary" width="180">
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="features.html">Функции</a></li>
+                        <li><a href="examples.html">Примеры</a></li>
+                        <li><a href="audience.html">Для кого</a></li>
+                        <li><a href="blog/">Блог</a></li>
+                        <li><a href="contacts.html" class="btn-outline">Контакты</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Раскройте свою личность через цвет</h1>
+                <p class="hero-subtitle">Цветовой дневник - ваш персональный гид по психологии цвета</p>
+                <div class="hero-buttons">
+                    <a href="#demo-test" class="btn-primary">Попробовать демо</a>
+                    <a href="#" class="btn-secondary">Скачать приложение</a>
+                </div>
+            </div>
+            <div class="color-wheel-container">
+                <div class="color-wheel" id="interactiveWheel"></div>
+                <div class="wheel-tooltip">Выберите цвет</div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Как работает цветовой дневник</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #FF6B6B;">
+                        <img src="images/icons/palette.svg" alt="Палитра" width="40">
+                    </div>
+                    <h3>Цветовой тест</h3>
+                    <p>Определите свои цветовые предпочтения с помощью научно обоснованного теста</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #4ECDC4;">
+                        <img src="images/icons/diary.svg" alt="Дневник" width="40">
+                    </div>
+                    <h3>Дневник настроения</h3>
+                    <p>Отслеживайте как разные цвета влияют на ваше эмоциональное состояние</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #45B7D1;">
+                        <img src="images/icons/analysis.svg" alt="Анализ" width="40">
+                    </div>
+                    <h3>Персональный анализ</h3>
+                    <p>Получайте детальные отчеты о ваших цветовых паттернах</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background-color: #A37BFC;">
+                        <img src="images/icons/recommendations.svg" alt="Рекомендации" width="40">
+                    </div>
+                    <h3>Персональные рекомендации</h3>
+                    <p>Советы по использованию цветов в одежде, интерьере и рабочем пространстве</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-test" id="demo-test">
+        <div class="container">
+            <h2 class="section-title">Быстрый тест (демо-версия)</h2>
+            <p class="section-subtitle">Ответьте на 3 вопроса, чтобы получить предварительный анализ</p>
+            
+            <div class="test-container">
+                <div class="test-question active">
+                    <h3>Какой цвет вас успокаивает?</h3>
+                    <div class="color-options">
+                        <div class="color-option" data-color="blue" style="background-color: #6B8EFF;"></div>
+                        <div class="color-option" data-color="green" style="background-color: #7CFC7C;"></div>
+                        <div class="color-option" data-color="purple" style="background-color: #BA7CFC;"></div>
+                        <div class="color-option" data-color="neutral" style="background-color: #F0F0F0;"></div>
+                    </div>
+                </div>
+                
+                <div class="test-question">
+                    <h3>Какой цвет вы бы выбрали для активного дня?</h3>
+                    <div class="color-options">
+                        <div class="color-option" data-color="red" style="background-color: #FF6B6B;"></div>
+                        <div class="color-option" data-color="orange" style="background-color: #FFA500;"></div>
+                        <div class="color-option" data-color="yellow" style="background-color: #FFD700;"></div>
+                        <div class="color-option" data-color="bright" style="background-color: #45D1D1;"></div>
+                    </div>
+                </div>
+                
+                <div class="test-question">
+                    <h3>Какой цвет ассоциируется у вас с домом?</h3>
+                    <div class="color-options">
+                        <div class="color-option" data-color="warm" style="background-color: #FFA07A;"></div>
+                        <div class="color-option" data-color="earth" style="background-color: #D2B48C;"></div>
+                        <div class="color-option" data-color="cool" style="background-color: #B0E0E6;"></div>
+                        <div class="color-option" data-color="dark" style="background-color: #708090;"></div>
+                    </div>
+                </div>
+                
+                <div class="test-result">
+                    <h3>Ваш цветовой профиль</h3>
+                    <div class="result-color-profile"></div>
+                    <p class="result-description"></p>
+                    <button class="btn-primary restart-test">Пройти еще раз</button>
+                    <a href="#" class="btn-secondary">Полный тест</a>
+                </div>
+                
+                <div class="test-progress">
+                    <div class="progress-bar"></div>
+                    <div class="progress-steps">
+                        <span class="active">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                </div>
+                
+                <button class="btn-primary next-question" disabled>Далее</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="report-preview">
+        <div class="container">
+            <h2 class="section-title">Пример отчета</h2>
+            <p class="section-subtitle">Посмотрите, как выглядит полный анализ вашего цветового профиля</p>
+            
+            <div class="report-slider">
+                <div class="report-slide active">
+                    <div class="report-image">
+                        <img src="images/screenshots/report1.jpg" alt="Пример отчета">
+                    </div>
+                    <div class="report-description">
+                        <h3>Цветовые предпочтения</h3>
+                        <p>Анализ ваших любимых цветов и их психологическое значение</p>
+                    </div>
+                </div>
+                <div class="report-slide">
+                    <div class="report-image">
+                        <img src="images/screenshots/report2.jpg" alt="Пример отчета">
+                    </div>
+                    <div class="report-description">
+                        <h3>Эмоциональные паттерны</h3>
+                        <p>Как разные цвета влияют на ваше настроение в течение дня</p>
+                    </div>
+                </div>
+                <div class="report-slide">
+                    <div class="report-image">
+                        <img src="images/screenshots/report3.jpg" alt="Пример отчета">
+                    </div>
+                    <div class="report-description">
+                        <h3>Персональные рекомендации</h3>
+                        <p>Советы по использованию цветов в вашей жизни</p>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-prev">&lt;</button>
+                    <div class="slider-dots">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <button class="slider-next">&gt;</button>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="#" class="btn-primary">Получить полный отчет</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ar-demo">
+        <div class="container">
+            <div class="ar-content">
+                <h2 class="section-title">Попробуйте цвета в своем пространстве</h2>
+                <p>Используйте AR-режим, чтобы увидеть как разные цвета будут выглядеть в вашей комнате</p>
+                <button class="btn-primary ar-button">
+                    <img src="images/icons/ar.svg" alt="AR" width="24">
+                    Открыть AR-камеру
+                </button>
+            </div>
+            <div class="ar-preview">
+                <img src="images/ar-preview.png" alt="AR Preview" class="ar-image">
+                <div class="color-selector">
+                    <div class="color-option active" style="background-color: #FF6B6B;"></div>
+                    <div class="color-option" style="background-color: #6B8EFF;"></div>
+                    <div class="color-option" style="background-color: #7CFC7C;"></div>
+                    <div class="color-option" style="background-color: #BA7CFC;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Что говорят пользователи</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <img src="images/users/user1.jpg" alt="Марина" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Марина, 32 года</h4>
+                            <p>Дизайнер интерьеров</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Цветовой дневник помог мне понять, почему некоторые проекты давались мне тяжелее других. Теперь я учитываю цветовые предпочтения клиентов на новом уровне."</p>
+                    </div>
+                    <div class="testimonial-colors">
+                        <span style="background-color: #6B8EFF;"></span>
+                        <span style="background-color: #7CFC7C;"></span>
+                        <span style="background-color: #FFD700;"></span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <img src="images/users/user2.jpg" alt="Алексей" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Алексей, 28 лет</h4>
+                            <p>IT-специалист</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Никогда не думал, что цвета могут так влиять на продуктивность. Благодаря анализу изменил цветовую схему в рабочем пространстве и стал меньше уставать."</p>
+                    </div>
+                    <div class="testimonial-colors">
+                        <span style="background-color: #45B7D1;"></span>
+                        <span style="background-color: #F0F0F0;"></span>
+                        <span style="background-color: #708090;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Готовы раскрыть свой цветовой профиль?</h2>
+            <p class="section-subtitle">Начните свой цветовой путь уже сегодня</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Зарегистрироваться</a>
+                <a href="#" class="btn-secondary">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo-white.svg" alt="Color Diary" width="160">
+                    <p>Цветовой дневник личности — ваш гид в мире психологии цвета с 2023 года</p>
+                    <div class="social-links">
+                        <a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="images/icons/twitter.svg" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="about.html">О проекте</a></li>
+                        <li><a href="features.html">Функции</a></li>
+                        <li><a href="examples.html">Примеры отчетов</a></li>
+                        <li><a href="audience.html">Для кого</a></li>
+                        <li><a href="blog/">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ресурсы</h4>
+                    <ul>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Исследования</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Подписка на новости</h4>
+                    <p>Получайте статьи о психологии цвета и обновления приложения</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email">
+                        <button type="submit">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Color Diary. Все права защищены.</p>
+                <div class="legal-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/color-wheel.js"></script>
+</body>
+</html>
